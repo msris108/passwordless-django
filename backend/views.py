@@ -21,6 +21,7 @@ def getCurrentUser(request):
 
 @api_view(['GET'])
 def getUserByEmail(request, email): 
+    '''Get user by email : only for superusers'''
     if request.user.is_superuser:
         serializer = UserSerializer(CustomUser.objects.filter(email=email).values()[0])
         if serializer.is_valid:
@@ -30,6 +31,7 @@ def getUserByEmail(request, email):
 
 @api_view(['GET'])
 def getAllUsers(request):
+    '''Get all user : only for superusers'''
     if request.user.is_superuser:
         serializer = UserSerializer(CustomUser.objects.all().values(), many=True)
         if serializer.is_valid:
