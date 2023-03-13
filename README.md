@@ -22,7 +22,10 @@ localhost:8000/admin -> admin panel
 
 ## Using environment variables
 1. import environ(refer to usage in settings)
-2. create .env file in base
+2. create .env file in base (/base/.env)
 3. store key-value pairs, eg. SECRET=abc (**no quotes**)
+
+### Add in .env 
+SECRET=django-insecure-%0h=*ehn5pisl8#yij*&clgfg!^9)0yyc7t6sy)b0auyf)pmu_
 
 > NOTE: Backend is optimized for just creating Models and Views. 

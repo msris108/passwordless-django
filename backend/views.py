@@ -5,4 +5,4 @@ from rest_framework.decorators import api_view
 
 @api_view(['GET'])
 def index(request):
-    return Response({"message": "Hello, world!"})
+    return Response({"message": "Hello, " + str(request.user)})
